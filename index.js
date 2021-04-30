@@ -26,7 +26,7 @@ app.use(bodypanser.urlencoded({
 }))
 
 app.get('/', (req, res) => {
-  res.send('<h1>cahya dian</h1>')
+  res.send('<h1>Hello World</h1>')
 })
 //req param
 app.get('/daerah/:namadaerah/:id', (req, res) => {
@@ -41,6 +41,7 @@ app.get('/daerah/:namadaerah/:id', (req, res) => {
 //})
 //const useRoutes = require('.')
 app.use('/user/', require('./routes/User'))
+app.use('/kegiatan/', require('./routes/Kegiatan'))
 
 
 app.listen(3000, () => {
